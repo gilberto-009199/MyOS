@@ -6,7 +6,7 @@
 	
   Worspace para criar um Sistema Operacional.
 
-# Bibliotecas e Dependencias
+## Bibliotecas e Dependencias
 
 * [crosstool-ng](https://github.com/crosstool-ng/crosstool-ng) - Compilador
 * [Bash](https://www.gnu.org/software/bash/) - Shell para usar os scripts e para implantar no sistema
