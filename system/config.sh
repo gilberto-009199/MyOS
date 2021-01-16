@@ -14,5 +14,24 @@ DIR_SCRIPTS="$DIR_SYSTEM/scripts";
 # DIR das Ferramentas de Desenvolvimento
 DIR_TOOLS="$DIR_SYSTEM/tools";
 # DIR do compilador do Sistema
-DIR_COMPILADOR="$DIR_TOOLS/compile/";
+DIR_COMPILADOR="$DIR_TOOLS/compile";
 
+print_raw " Verificando e configurando.";
+
+#Verificando se a pasta do compilador existe
+if [ ! -d "$DIR_COMPILADOR/build" ];
+ then
+   echo " [ WARN ] Diretorio do Compilador ausente!";
+   echo "Execute a compilação e determine o prefix como:"
+   echo "./configure --prefix=\"$DIR_COMPILADOR/build\"";
+
+   echo "Eu posso baixar e compilar o crosstool-ng";
+   read -p "Deseja que eu baixe e compile para vc? (s/n)}> " isCompilar;
+   if [ isCompilar=="s" ];
+     then
+       print_raw "Iniciando $DIR_SCRIPTS/compilador.sh....";
+       source "$DIR_SCRIPTS/compilador.sh";
+   fi
+ else
+   echo " [ OK ] Diretorio do compilador";
+fi
