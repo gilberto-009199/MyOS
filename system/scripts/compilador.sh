@@ -18,6 +18,10 @@ if [ ! -e "$DIR_COMPILADOR/cross-ng/configure" ];
   	echo " Executando pre montagem.... ";
     chmod +x "$DIR_COMPILADOR/cross-ng/bootstrap";
     exec "$DIR_COMPILADOR/cross-ng/bootstrap";
+    if [ $? -eq 1 ];
+      then
+        echo "Erro ao executar o Boostrap!";
+    fi
 fi
 
 echo "Executando configure.... ";
@@ -33,7 +37,7 @@ if [ $? -eq 1 ];
     echo "   ArchLinux:"
     echo "      sudo pacman -S help2man"
     echo "   Debian:"
-    echo "      sudo apt-get install help2man"
+    echo "      sudo apt-get install help2man libtool libtool-bin libtool-doc autoconfig gperf bison flex texinfo"
     echo "  2° tente executar como root"
     echo "   No script: "
     echo "      sudo ./config.sh "
@@ -76,16 +80,14 @@ if [ ! -e "$DIR_COMPILADOR/build/bin/.config" ];
        echo "CT_BUILD_TOP_DIR=\"\${CT_WORK_DIR:-\${CT_TOP_DIR}/.build}/\${CT_HOST:+HOST-\${CT_HOST}/}\${CT_TARGET}" >> "$DIR_COMPILADOR/build/bin/.config";
        echo "CT_BUILD_DIR=\"\${CT_BUILD_TOP_DIR}/build" >> "$DIR_COMPILADOR/build/bin/.config";
        echo "CT_PREFIX_DIR=\"$DIR_COMPILADOR/build/x-tools\"" >> "$DIR_COMPILADOR/build/bin/.config";
-
      else
        $DIR_COMPILADOR/build/bin/ct-ng menuconfig
-
     fi
     echo " [ OK ] Configuracao do Montador feita!"
 fi
 #clear
 echo " Executando build do toolchain....";
-echo " POde levar alguns minutos";
+echo " Pode levar alguns minutos";
 read -p "Digite o  numero de nucleos da cpu para compilacao mais otimizada (1/2/3/4..)}> " nucleos;
 echo "exec $DIR_COMPILADOR/build/bin/ct-ng build.$nucleos";
 

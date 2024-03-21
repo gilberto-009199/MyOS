@@ -19,6 +19,7 @@ DIR_COMPILADOR="$DIR_TOOLS/compile";
 print_raw " Verificando e configurando.";
 
 #Verificando se a pasta do compilador existe
+# Verificar a menssagem do usuario 
 if [ ! -d "$DIR_COMPILADOR/build" ];
  then
    echo " [ WARN ] Diretorio do Compilador ausente!";
