@@ -5,12 +5,6 @@
 
 <img width="600px" src="boot-os.png" alt="Tela de Boot">
 
-
-<br/>
-<br/>
-<br/>
-
-
 <p> Distro Meme baseada em Debian. </p>
 
 
