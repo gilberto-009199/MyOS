@@ -6,8 +6,7 @@
 
 <img width="600px" src="boot-os.png" alt="Tela de Boot">
 
-<p> Distro Meme baseada em Debian. </p>
+Distro Meme baseada em Debian.
 
 
-
-"Caramelo e pobre, mas e valente!!"
+"Caramelo e pobre, mas é valente!!"
