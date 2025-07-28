@@ -1,13 +1,17 @@
 
 # Caramelo OS
 
-<img width="512px" src="boot-os.png" alt="Tela de Boot">
+<img width="255px" src="home.png" alt="Tela de home"> <img width="255px" src="home-terminal-thunar.png" alt="Tela de home term thunar">
 
-<img align="left" width="255px" src="home.png" alt="Tela de home"><img align="left" width="255px" src="home-terminal-thunar.png" alt="Tela de home term thunar">
+<img width="600px" src="boot-os.png" alt="Tela de Boot">
 
 
+<br/>
+<br/>
+<br/>
 
-Distro Meme baseada em Debian.
+
+<p> Distro Meme baseada em Debian. </p>
 
 
 
