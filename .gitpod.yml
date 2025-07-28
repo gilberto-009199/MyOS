@@ -1,3 +1,0 @@
-tasks:
-  - init: bash ./config.sh
-    command: echo ' Ainda em desenvolvimento a integracao no gitpod!'
