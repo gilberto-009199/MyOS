@@ -1,0 +1,103 @@
+* {
+  font: "Roboto 10";
+  bg0    : #db8412;
+  bg1    : #f7a73f;
+  bg2    : #c77b19;
+  bg3    : #ff9100;
+  fg0    : #d6d6d6;
+  fg1    : #cfcfcf;
+  accent : #ffffff;
+  urgent : @accent;
+ 
+  background-color : transparent;
+  text-color       : @fg0;
+
+  margin  : 0;
+  padding : 0;
+  spacing : 0;
+}
+
+element-icon, element-text, scrollbar {
+  cursor: pointer;
+}
+
+window {
+  location : south;
+  width    : 600px;
+  height   : 600px;
+  y-offset : -4px;
+
+  background-color : @bg1;
+  border-radius    : 4px;
+}
+
+mainbox {
+  padding : 24px;
+  spacing : 24px;
+  
+  children: [inputbar, listview];
+}
+
+inputbar {
+  padding          : 8px;
+  spacing          : 4px;
+  children         : [ icon-search, entry ];
+  border           : 0 0 2px 0 solid;
+  border-color     : @accent;
+  border-radius    : 2px;
+  background-color : @bg0;
+}
+
+icon-search, entry, element-icon, element-text {
+  vertical-align: 0.5;
+}
+
+icon-search {
+  expand   : false;
+  filename : "search-symbolic";
+  size     : 24px;
+}
+
+entry {
+  font              : "Roboto 12";
+  placeholder       : "Search";
+  placeholder-color : @fg1;
+}
+
+textbox {
+  padding          : 4px 8px;
+  background-color : @bg2;
+}
+
+listview {
+  columns: 4;
+  fixed-height: true;
+  fixed-columns: true;
+  spacing: 12px;
+  cycle: true;
+  dynamic: false;
+}
+
+element {
+  orientation: vertical;
+  spacing: 4px;
+  padding: 10px;
+  children: [element-icon, element-text];
+  background-color: @bg2;
+  border-radius: 4px;
+}
+
+element selected {
+  border: 2px;
+  background-color: @bg3;
+  border-radius: 4px;
+}
+
+element-icon {
+  size: 32px;
+}
+
+element-text {
+  horizontal-align: 0.5;
+  text-align: center;
+}

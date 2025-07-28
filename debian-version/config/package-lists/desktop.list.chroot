@@ -1,0 +1,11 @@
+openbox
+menu
+python3-xdg
+pulseaudio
+pavucontrol
+tint2
+pcmanfm
+xfce4-terminal
+rofi
+xserver-xorg
+xinit
